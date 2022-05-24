@@ -8,4 +8,5 @@ export default defineNuxtConfig({
     "primeicons/primeicons.css",
   ],
   //ssr: false,
+  buildModules: ['@pinia/nuxt'],
 });
