@@ -1,13 +1,15 @@
 <template>
   <div
-    class="head-bar backdrop-blur-sm p-2 flex flex-row justify-between items-center text-slate-400 shadow-md shadow-slate-200"
+    class="head-bar backdrop-blur-sm p-3 flex flex-row justify-between items-center text-slate-400 shadow-md shadow-slate-200"
   >
     <MenuIcon
-      class="h-6 w-6 hover:text-slate-500"
+      class="h-5 w-5 hover:text-slate-500 hover:cursor-pointer"
       @click="toggleMenuActive(true)"
     ></MenuIcon>
     <h1 class="title text-slate-500 text-xl font-light">{{ data.title }}</h1>
-    <SearchIcon class="h-6 w-6 hover:text-slate-500"></SearchIcon>
+    <SearchIcon
+      class="h-5 w-5 hover:text-slate-500 hover:cursor-pointer"
+    ></SearchIcon>
   </div>
 
   <div
@@ -17,14 +19,15 @@
         ? 'w-screen h-screen bg-white bg-opacity-25 backdrop-blur-sm'
         : ''
     "
+    @click.self="toggleMenuActive(false)"
   >
     <div
-      class="menu absolute top-0 w-60 h-screen bg-white p-2 shadow-md shadow-slate-200 transition-all duration-500"
+      class="menu absolute top-0 w-60 h-screen bg-white p-3 shadow-md shadow-slate-200 transition-all duration-500"
       :class="data.menuActive ? 'left-0' : '-left-60'"
     >
       <XIcon
         @click="toggleMenuActive(false)"
-        class="text-slate-400 hover:text-slate-500 h-6 w-6"
+        class="text-slate-400 hover:text-slate-500 hover:cursor-pointer h-5 w-5"
       ></XIcon>
     </div>
   </div>
