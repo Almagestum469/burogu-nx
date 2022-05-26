@@ -6,18 +6,27 @@
       class="h-6 w-6 hover:text-slate-500"
       @click="toggleMenuActive(true)"
     ></MenuIcon>
-    <h1 class="title text-slate-500 text-xl font-light">Title</h1>
+    <h1 class="title text-slate-500 text-xl font-light">{{ data.title }}</h1>
     <SearchIcon class="h-6 w-6 hover:text-slate-500"></SearchIcon>
   </div>
 
   <div
-    class="menu absolute top-0 w-60 h-screen bg-white p-2 shadow-md shadow-slate-200 transition-all duration-500"
-    :class="data.menuActive ? 'left-0' : '-left-60'"
+    class="menu-background absolute top-0 left-0"
+    :class="
+      data.menuActive
+        ? 'w-screen h-screen bg-white bg-opacity-25 backdrop-blur-sm'
+        : ''
+    "
   >
-    <XIcon
-      @click="toggleMenuActive(false)"
-      class="text-slate-400 hover:text-slate-500 h-6 w-6"
-    ></XIcon>
+    <div
+      class="menu absolute top-0 w-60 h-screen bg-white p-2 shadow-md shadow-slate-200 transition-all duration-500"
+      :class="data.menuActive ? 'left-0' : '-left-60'"
+    >
+      <XIcon
+        @click="toggleMenuActive(false)"
+        class="text-slate-400 hover:text-slate-500 h-6 w-6"
+      ></XIcon>
+    </div>
   </div>
 </template>
 
@@ -29,6 +38,7 @@ import { MenuIcon, XIcon, SearchIcon } from "@heroicons/vue/outline";
 
 const data = reactive({
   menuActive: false,
+  title: "Hello World!",
 });
 
 function toggleMenuActive(val: boolean) {
