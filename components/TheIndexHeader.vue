@@ -1,6 +1,6 @@
 <template>
   <div
-    class="head-bar backdrop-blur-sm p-5 flex flex-row justify-between items-center bg-slate-100 bg-opacity-50 text-slate-400 sticky top-0 left-0"
+    class="head-bar w-screen backdrop-blur-sm p-5 flex justify-between items-center bg-slate-100 bg-opacity-50 text-slate-400 sticky top-0 left-0"
   >
     <MenuIcon
       class="h-5 w-5 hover:text-slate-500 hover:cursor-pointer"
