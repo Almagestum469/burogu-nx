@@ -10,7 +10,7 @@
     <BlogCard></BlogCard>
   </div> -->
 
-  <NuxtLayout name="blog"> </NuxtLayout>
+  <BlogRenderer></BlogRenderer>
 </template>
 
 <script
