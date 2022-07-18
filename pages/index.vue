@@ -1,16 +1,16 @@
 <template>
-  <!-- <TheIndexHeader></TheIndexHeader>
-  <TheEditor></TheEditor>
-  <div class="blog-flow flex justify-center items-center flex-wrap">
+  <!-- <TheIndexHeader></TheIndexHeader> -->
+  <!-- <TheEditor></TheEditor> -->
+  <div class="blog-flow flex justify-center items-center flex-col flex-wrap">
     <BlogCard></BlogCard>
     <BlogCard></BlogCard>
     <BlogCard></BlogCard>
     <BlogCard></BlogCard>
     <BlogCard></BlogCard>
     <BlogCard></BlogCard>
-  </div> -->
+  </div>
 
-  <BlogRenderer></BlogRenderer>
+  <!-- <BlogRenderer></BlogRenderer> -->
 </template>
 
 <script
